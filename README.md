@@ -11,7 +11,7 @@ xbench is more than just a scoreboard — it's a new evaluation framework with t
 We open source the dataset and evaluation code for two of our AGI Tracking benchmarks: ScienceQA and DeepSearch.
 
 ## xbench-ScienceQA
-- ScienceQA is part of xbench's AGI Tracking series, focused on evaluating fundamental knowledge capabilities across scientific domains. For detailed evaluation procedures and further information, please refer to the [xbench website](https://xbench.org/#/agi/scienceqa) or Eval Card [xbench-ScienceQA.pdf](https://xbench.org/files/Eval%20Card%20xbench-ScienceQA.pdf) (Chinese version)
+ScienceQA is part of xbench's AGI Tracking series, focused on evaluating fundamental knowledge capabilities across scientific domains. For detailed evaluation procedures and further information, please refer to the [website](https://xbench.org/#/agi/scienceqa) and Eval Card [xbench-ScienceQA.pdf](https://xbench.org/files/Eval%20Card%20xbench-ScienceQA.pdf) (Chinese version)
 
 | Rank |                Model                |   Company    | Score | BoN (N=5) | Time cost (s) |
 |------|:-----------------------------------:|:------------:|:-----:|:---------:|:-------------:|
@@ -27,7 +27,7 @@ We open source the dataset and evaluation code for two of our AGI Tracking bench
 | 10   | Claude Sonnet 4 - Extended Thinking |  Anthropic   | 39.4	 |   61.0    |     28.3      |
 
 ## xbench-DeepSearch
-- DeepSearch is part of xbench's AGI Tracking series, focused on evaluating tool usage capabilities in search and information retrieval scenarios. For detailed evaluation procedures and further information, please refer to the [xbench website](https://xbench.org/#/agi/aisearch) or Eval Card [xbench-DeepSearch](https://xbench.org/files/Eval%20Card%20xbench-DeepSearch.pdf) (Chinese version)
+DeepSearch is part of xbench's AGI Tracking series, focused on evaluating tool usage capabilities in search and information retrieval scenarios. For detailed evaluation procedures and further information, please refer to the [website](https://xbench.org/#/agi/aisearch) and Eval Card [xbench-DeepSearch](https://xbench.org/files/Eval%20Card%20xbench-DeepSearch.pdf) (Chinese version)
 
 | Rank |           Model            |      Mode       |  Company  | Accuracy | Evaluation Date |
 |------|:--------------------------:|:---------------:|:---------:|:--------:|:---------------:|
