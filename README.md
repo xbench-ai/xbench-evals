@@ -1,6 +1,6 @@
-# xbench-evals
+# xbench-evals <img src="./images/xbench_logo.png" width="40" height="25" />
 
-🌐 [Website](https://xbench.org) | 📄 [Paper](https://xbench.org/files/xbench_profession_v2.4.pdf) | 🤗 [Dataset](https://huggingface.co/datasets/)
+🌐 [Website](https://xbench.org) | 📄 [Paper](https://xbench.org/files/xbench_profession_v2.4.pdf) | 🤗 [Dataset](https://huggingface.co/datasets/xbench)
 
 Evergreen, contamination-free, real-world, domain-specific AI evaluation framework
 
@@ -11,6 +11,7 @@ xbench is more than just a scoreboard — it's a new evaluation framework with t
 We open source the dataset and evaluation code for two of our AGI Tracking benchmarks: ScienceQA and DeepSearch.
 
 ## xbench-ScienceQA
+- ScienceQA is part of xbench's AGI Tracking series, focused on evaluating fundamental knowledge capabilities across scientific domains. For detailed evaluation procedures and further information, please refer to the [xbench website](https://xbench.org/#/agi/scienceqa) or Eval Card [xbench-ScienceQA.pdf](https://xbench.org/files/Eval%20Card%20xbench-ScienceQA.pdf) (Chinese version)
 
 | Rank |                Model                |   Company    | Score | BoN (N=5) | Time cost (s) |
 |------|:-----------------------------------:|:------------:|:-----:|:---------:|:-------------:|
@@ -26,6 +27,7 @@ We open source the dataset and evaluation code for two of our AGI Tracking bench
 | 10   | Claude Sonnet 4 - Extended Thinking |  Anthropic   | 39.4	 |   61.0    |     28.3      |
 
 ## xbench-DeepSearch
+- DeepSearch is part of xbench's AGI Tracking series, focused on evaluating tool usage capabilities in search and information retrieval scenarios. For detailed evaluation procedures and further information, please refer to the [xbench website](https://xbench.org/#/agi/aisearch) or Eval Card [xbench-DeepSearch](https://xbench.org/files/Eval%20Card%20xbench-DeepSearch.pdf) (Chinese version)
 
 | Rank |           Model            |      Mode       |  Company  | Accuracy | Evaluation Date |
 |------|:--------------------------:|:---------------:|:---------:|:--------:|:---------------:|
@@ -41,7 +43,7 @@ We open source the dataset and evaluation code for two of our AGI Tracking bench
 ## Setup
 
 Make sure to set the `*_API_KEY` environment variables before using these APIs.
-By default, we use gemini-2.0-flash as the judge model, so you need to set the `GOOGLE_API_KEY` environment variable.
+By default, we use gemini-2.0-flash as the judge model, so you need to set the `GOOGLE_API_KEY` environment variable as well.
 
 For the [OpenAI API](https://pypi.org/project/openai/):
 ```bash
@@ -51,5 +53,12 @@ pip install openai
 ## Running the evals
 To run the evaluations, you can use the following command:
 ```bash
-python xbench_evals --model <model_name> --dataset <data/ScienceQA.csv or data/DeepSearch.csv> --n-repeats <num_repeats>
+python xbench_evals.py --model <model_name> --dataset <data/ScienceQA.csv or data/DeepSearch.csv> --n-repeats <num_repeats>
 ```
+
+Model name and API endpoint mappings are maintained in language_models.py, you can add your own models there.
+
+## Submit your agent
+If you are developing an AI agent and would like to evaluate it using the latest version of xbench, we welcome you to contact us. Please submit a public access link of your agent, and we will complete the evaluation within an agreed timeframe and share the results with you promptly.
+
+Contact: [team@xbench.org]()
