@@ -1,7 +1,17 @@
+import base64
 import csv
 import argparse
 from tqdm import tqdm
 from eval_grader import eval_and_grade_question
+
+
+def xor_decrypt(data, key):
+    """
+    XOR decrypt data with a key
+    """
+    key_bytes = key.encode('utf-8')
+    key_length = len(key_bytes)
+    return bytes([data[i] ^ key_bytes[i % key_length] for i in range(len(data))])
 
 
 def main():
@@ -14,7 +24,12 @@ def main():
 
     with open(args.dataset, mode='r', encoding='utf-8-sig') as file:
         reader = csv.DictReader(file)
-        questions = [_ for _ in reader]
+        questions = []
+        for question in reader:
+            key = question["canary"]
+            question["prompt"] = xor_decrypt(base64.b64decode(question["prompt"]), key).decode('utf-8')
+            question["answer"] = xor_decrypt(base64.b64decode(question["answer"]), key).decode('utf-8')
+            questions.append(question)
 
     header = ["id", "prompt", "type", "answer"]
     for n_repeat in range(n_repeats):

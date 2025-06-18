@@ -58,6 +58,9 @@ python xbench_evals.py --model <model_name> --dataset <data/ScienceQA.csv or dat
 
 Model name and API endpoint mappings are maintained in language_models.py, you can add your own models there.
 
+## Notes
+Benchmark data is encrypted to prevent search engine crawling and contamination, you can use the decrypt code in xbench_evals.py to get the plain text data. Please don't upload the plain text online. 
+
 ## Submit your agent
 If you are developing an AI agent and would like to evaluate it using the latest version of xbench, we welcome you to contact us. Please submit a public access link of your agent, and we will complete the evaluation within an agreed timeframe and share the results with you promptly.
 
