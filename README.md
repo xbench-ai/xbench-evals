@@ -29,6 +29,23 @@ ScienceQA is part of xbench's AGI Tracking series, focused on evaluating fundame
 ## xbench-DeepSearch
 DeepSearch is part of xbench's AGI Tracking series, focused on evaluating tool usage capabilities in search and information retrieval scenarios. For detailed evaluation procedures and further information, please refer to the [website](https://xbench.org/#/agi/aisearch) and Eval Card [xbench-DeepSearch](https://xbench.org/files/Eval%20Card%20xbench-DeepSearch.pdf) (Chinese version)
 
+### xbench-DeepSearch-2510
+| Rank |           Product          |  Company  | Accuracy |  Cost/Task  |  Time Cost/Task  | Evaluation Date |
+|------|:--------------------------:|:---------:|:--------:|:-----------:|:----------------:|:---------------:|
+| 1    |        ChatGPT-5-Pro       |  OpenAI   |   75+    |   ~$0.085   |     5-8 min      |     2025.08     |
+| 2    |       SuperGrok Expert     |    xAI    |   40+    |   ~$0.08    |     3-5 min      |     2025.08     |
+| 3    |           Fellou           |  Fellou   |   35+    |   ~$2       |     5-8 min      |     2025.08     |
+| 3    |        Minimax Agent       |  Minimax  |   35+    |   ~$1.1     |     8-15 min     |     2025.08     |
+| 3    |      StepFun Research      |  StepFun  |   35+    |   Free      |     8-15 min     |     2025.08     |
+| 3    |           Flowith          |  Flowith  |   35+    |   ~$0.1     |     8-15 min     |     2025.08     |
+| 3    |           Skywork          |  Kunlun   |   35+    |   ~$0.55    |     3-5 min      |     2025.08     |
+| 3    |         Manus Agent        |  Manus    |   35+    |   ~$0.63    |     3-5 min      |     2025.08     |
+| 3    |    Doubao Deep Research    | ByteDance |   35+    |   Free      |     5-8 min      |     2025.08     |
+| 10   |    Genspark Super Agent    |  MainFunc |   30+    |   ~$0.15    |     3-5 min      |     2025.08     |
+| 10   |          Coze Space        | ByteDance |   30+    |   Free      |     2-3 min      |     2025.08     |
+
+
+### xbench-DeepSearch-2505
 | Rank |           Model            |      Mode       |  Company  | Accuracy | Evaluation Date |
 |------|:--------------------------:|:---------------:|:---------:|:--------:|:---------------:|
 | 1    |             o3             |     Search      |  OpenAI   |   65+    |     2025.05     |
@@ -53,7 +70,7 @@ pip install openai
 ## Running the evals
 To run the evaluations, you can use the following command:
 ```bash
-python xbench_evals.py --model <model_name> --dataset <data/ScienceQA.csv or data/DeepSearch.csv> --n-repeats <num_repeats>
+python xbench_evals.py --model <model_name> --dataset <data/ScienceQA.csv or data/DeepSearch-2510.csv> --n-repeats <num_repeats>
 ```
 
 Model name and API endpoint mappings are maintained in language_models.py, you can add your own models there.
