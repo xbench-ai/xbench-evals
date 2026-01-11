@@ -55,6 +55,13 @@ DeepSearch is part of xbench's AGI Tracking series, focused on evaluating tool u
 | 3    |  Gemini 2.5 Pro (preview)  |  Deep Research  |  Google   |   50+    |     2025.05     |
 
 
+## BabyVision: Visual Reasoning Beyond Language
+BabyVision, in collaboration with UniPat AI, is part of xbench's AGI-Aligned series, focused on evaluating visual understanding for "Unspeakable" Challenges.
+
+### Open Source Link: 
+- UniPat blog: [https://unipat.ai/blog/BabyVision](https://unipat.ai/blog/BabyVision)
+- Github: [https://github.com/UniPat-AI/BabyVision](https://github.com/UniPat-AI/BabyVision)
+- Hugging Face: [https://huggingface.co/collections/UnipatAI/babyvision](https://huggingface.co/collections/UnipatAI/babyvision)
 
 
 ## Setup
